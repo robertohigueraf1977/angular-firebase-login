@@ -17,11 +17,11 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.authService.getAuth().subscribe( auth => {
-      if(auth) {
+      if (auth) {
         this.isLogin = true;
         this.nombreUsuario = auth.displayName;
         this.emailUsuario = auth.email;
-      }else {
+      } else {
         this.isLogin = false;
       }
     });
